@@ -25,7 +25,7 @@ body {
 }
 
 .top-bar {
-  background-color: var(--clr-white);
+  background-color: var(--clr-text-primary);
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -38,7 +38,7 @@ body {
 }
 
 .top-bar .nav-link {
-  color: #555;
+  color: var(--clr-white);
 }
 
 .top-bar .nav-link:hover {
@@ -463,4 +463,286 @@ body {
   .fake-scroll {
     display: none;
   }
+}
+
+
+/* =========================================== SERVIOCIOS PREMIUM ==================================== */
+
+/* ========= SECCIÓN BENEFICIOS PREMIUM ========= */
+
+.premium-benefits {
+  background-color: #f3f3f3;
+}
+
+/* Card general */
+.benefit-card {
+  background-color: var(--clr-white);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid var(--clr-secondary);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* Parte superior simulando imagen */
+.benefit-card-media {
+  height: 130px;
+  border-radius: 18px 18px 0 0;
+  background-image:
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%, transparent 75%, #e0e0e0 75%, #e0e0e0),
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%, transparent 75%, #e0e0e0 75%, #e0e0e0);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Parte inferior con texto */
+.benefit-card-body {
+  padding: 1.1rem 1.4rem;
+  border-top: 2px solid var(--clr-primary);
+  border-radius: 0 0 18px 18px;
+}
+
+.benefit-title {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: var(--clr-text-primary);
+}
+
+.benefit-text {
+  font-size: 0.78rem;
+  margin-bottom: 0;
+  color: var(--clr-text-secondary);
+}
+
+/* Flecha */
+.benefit-arrow {
+  align-self: center;
+  margin-left: 1rem;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--clr-primary);
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.benefit-card:hover .benefit-arrow {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  transform: translateX(3px);
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .benefit-card-body {
+    padding: 1rem 1.1rem;
+  }
+}
+
+
+
+
+/* ========== CONTACTO ========== */
+
+.contact-section {
+  background-color: #f3f3f3;
+}
+
+.contact-title {
+  font-size: 2.4rem;
+  letter-spacing: 0.15em;
+  color: var(--clr-primary);
+}
+
+.contact-subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-text-secondary);
+}
+
+.contact-card {
+  max-width: 780px;
+  background-color: var(--clr-white);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 2.2rem 2.4rem 3.4rem;
+}
+
+/* labels e inputs */
+.contact-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.15rem;
+  display: inline-block;
+}
+
+.contact-input {
+  border-radius: 999px;
+  border: 1.8px solid var(--clr-terceary);
+  font-size: 0.9rem;
+  padding: 0.55rem 1rem;
+  box-shadow: none;
+}
+
+.contact-input:focus {
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 0.15rem rgba(217, 165, 32, 0.25);
+}
+
+/* select */
+.contact-select {
+  background-color: var(--clr-white);
+}
+
+/* textarea */
+.contact-textarea {
+  border-radius: 18px;
+  border: 1.8px solid var(--clr-terceary);
+  resize: vertical;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+}
+
+.contact-textarea:focus {
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 0.15rem rgba(217, 165, 32, 0.25);
+}
+
+/* botón enviar */
+.contact-submit {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  border-radius: 999px;
+  border: none;
+  padding: 0.45rem 1.6rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-submit:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-white);
+}
+
+/* Píldoras con opciones del dropdown */
+.contact-topics {
+  position: absolute;
+  top: 50%;
+  right: -230px;
+  transform: translateY(-50%);
+  gap: 0.5rem;
+}
+
+.topic-pill {
+  background-color: var(--clr-white);
+  border-radius: 999px;
+  border: 1.5px solid var(--clr-terceary);
+  padding: 0.25rem 1.2rem;
+  font-size: 0.75rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.topic-pill.active,
+.topic-pill:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  border-color: var(--clr-primary);
+}
+
+/* Reutilizamos estilos de assistant-pill / assistant-icon
+   definidos antes para otras secciones */
+.contact-card .assistant-pill {
+  bottom: -18px;
+}
+
+.contact-card .assistant-icon {
+  bottom: -26px;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .contact-card {
+    padding: 1.8rem 1.4rem 3.4rem;
+  }
+
+  .contact-topics {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+  }
+
+  .contact-topics.d-none.d-md-flex {
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .topic-pill {
+    margin: 0.25rem;
+  }
+}
+
+/* ========== FOOTER ========== */
+
+.main-footer {
+  background-color: var(--clr-text-primary);
+  color: var(--clr-white);
+}
+
+.footer-title {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--clr-yellow-v2);
+  margin-bottom: 0.8rem;
+}
+
+.footer-text {
+  font-size: 0.82rem;
+}
+
+.footer-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.4rem;
+}
+
+.footer-bullet {
+  width: 20px;
+  text-align: center;
+}
+
+/* iconos redondos */
+.footer-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--clr-yellow-v2);
+}
+
+/* línea y copy */
+.footer-divider {
+  border-color: var(--clr-yellow-v2);
+  opacity: 0.6;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
 }

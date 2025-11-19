@@ -56,51 +56,75 @@
                 </div>
             </section>
 
-            <section class="services-grid py-5">
+
+            <section class="premium-benefits py-5">
                 <div class="container">
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <article class="service-card">
-                                <div class="service-card-image"></div>
-                                <div class="service-card-body">
-                                    <h3 class="service-card-title">TÍTULO</h3>
-                                    <p class="service-card-text">Cuerpo del texto</p>
+                            <article class="benefit-card">
+                                <div class="benefit-card-media"></div>
+                                <div class="benefit-card-body d-flex justify-content-between">
+                                    <div>
+                                        <h3 class="benefit-title">Estacionamiento</h3>
+                                        <p class="benefit-text">
+                                            Servicio de estacionamiento con reserva y asistencia profesional.
+                                            Tu vehículo en manos expertas.
+                                        </p>
+                                    </div>
+                                    <span class="benefit-arrow">&rsaquo;</span>
                                 </div>
                             </article>
                         </div>
 
                         <div class="col-md-6">
-                            <article class="service-card">
-                                <div class="service-card-image"></div>
-                                <div class="service-card-body">
-                                    <h3 class="service-card-title">TÍTULO</h3>
-                                    <p class="service-card-text">Cuerpo del texto</p>
+                            <article class="benefit-card">
+                                <div class="benefit-card-media"></div>
+                                <div class="benefit-card-body d-flex justify-content-between">
+                                    <div>
+                                        <h3 class="benefit-title">Asistente Personal</h3>
+                                        <p class="benefit-text">
+                                            Asistencia personalizada para hacer tu visita inolvidable.
+                                            Reservas, recomendaciones y más.
+                                        </p>
+                                    </div>
+                                    <span class="benefit-arrow">&rsaquo;</span>
                                 </div>
                             </article>
                         </div>
 
                         <div class="col-md-6">
-                            <article class="service-card">
-                                <div class="service-card-image"></div>
-                                <div class="service-card-body">
-                                    <h3 class="service-card-title">TÍTULO</h3>
-                                    <p class="service-card-text">Cuerpo del texto</p>
+                            <article class="benefit-card">
+                                <div class="benefit-card-media"></div>
+                                <div class="benefit-card-body d-flex justify-content-between">
+                                    <div>
+                                        <h3 class="benefit-title">WIFI Gratuito</h3>
+                                        <p class="benefit-text">
+                                            Conexión de alta velocidad en todas las áreas del centro comercial.
+                                        </p>
+                                    </div>
+                                    <span class="benefit-arrow">&rsaquo;</span>
                                 </div>
                             </article>
                         </div>
 
                         <div class="col-md-6">
-                            <article class="service-card">
-                                <div class="service-card-image"></div>
-                                <div class="service-card-body">
-                                    <h3 class="service-card-title">TÍTULO</h3>
-                                    <p class="service-card-text">Cuerpo del texto</p>
+                            <article class="benefit-card">
+                                <div class="benefit-card-media"></div>
+                                <div class="benefit-card-body d-flex justify-content-between">
+                                    <div>
+                                        <h3 class="benefit-title">Área de Descanso</h3>
+                                        <p class="benefit-text">
+                                            Lounges premium con servicio de café y espacios para trabajo remoto.
+                                        </p>
+                                    </div>
+                                    <span class="benefit-arrow">&rsaquo;</span>
                                 </div>
                             </article>
                         </div>
                     </div>
                 </div>
             </section>
+
 
             <section class="store-finder">
                 <div class="offers-marquee">
@@ -142,7 +166,7 @@
                                     </div>
 
                                     <div class="store-list-wrapper">
-                                      <ul class="list-unstyled mb-0 store-list" id="storeList"></ul>
+                                        <ul class="list-unstyled mb-0 store-list" id="storeList"></ul>
                                     </div>
 
                                     <div class="fake-scroll">
@@ -171,9 +195,130 @@
                 </div>
             </section>
 
+            <section class="banner-limits">
+                <div class="container py-4">
+                    <div class="row mb-4 justify-content-md-center">
+                        <div class="col-md-auto">
+                            <h2>ENTRETENIMIENTO <span style="color: var(--clr-primary);">SIN LIMITES</span></h2>
+                            <h5 style="text-align: center;">DIVERSIÓN Y CULTURA EN UNA SOLO LUGAR</h5>
+                        </div>
+                    </div>
+                    <div class="row mb-4 justify-content-md-center">
+                        <div class="col-md-auto">
+                            <div class="benefit-card-media"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </main>
     </div>
+
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="contact-title">CONTACTANOS</h2>
+                <p class="contact-subtitle">
+                    ESTAMOS A TU DISPOSICIÓN PARA LO QUE NECESITES
+                </p>
+            </div>
+
+            <div class="contact-card position-relative mx-auto">
+                <form class="contact-form">
+                    <div class="mb-3">
+                        <label class="contact-label" for="contactName">NOMBRE:</label>
+                        <input type="text" id="contactName" class="form-control contact-input"
+                            placeholder="Tu nombre" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="contact-label" for="contactEmail">EMAIL:</label>
+                        <input type="email" id="contactEmail" class="form-control contact-input"
+                            placeholder="tunombre@correo.com" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="contact-label" for="helpTopic">¿EN QUÉ PODEMOS AYUDARTE?</label>
+                        <select id="helpTopic" class="form-select contact-input contact-select">
+                            <option value="general" selected>Consultas generales</option>
+                            <option value="sugerencias">Sugerencias y experiencia</option>
+                            <option value="objetos">Objetos perdidos</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="contact-label" for="contactMessage">MENSAJE:</label>
+                        <textarea id="contactMessage" rows="4" class="form-control contact-textarea"
+                            placeholder="Escribí tu mensaje aquí..."></textarea>
+                    </div>
+
+                    <div class="text-end">
+                        <button type="submit" class="btn contact-submit">
+                            ENVIAR
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer py-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h4 class="footer-title">NOMBRE</h4>
+                    <p class="footer-text">
+                        Descripción corta del centro comercial o espacio. Un texto breve y claro.
+                    </p>
+
+                    <div class="footer-icons d-flex gap-3 mt-3">
+                        <span class="footer-icon"></span>
+                        <span class="footer-icon"></span>
+                        <span class="footer-icon"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="footer-title">CONTACTO</h4>
+                    <ul class="list-unstyled footer-list">
+                        <li>
+                            <span class="footer-bullet">📞</span>
+                            <span>+54 2545254545454</span>
+                        </li>
+                        <li>
+                            <span class="footer-bullet">📧</span>
+                            <span>correo@gmail.com</span>
+                        </li>
+                        <li>
+                            <span class="footer-bullet">📍</span>
+                            <span>Ubicación</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="footer-title">HORARIOS</h4>
+                    <p class="footer-text mb-1">
+                        Lunes a Sábado:<br />
+                        10:00 – 21:00 hs
+                    </p>
+                    <p class="footer-text">
+                        Domingos y feriados:<br />
+                        12:00 – 20:00 hs
+                    </p>
+                </div>
+            </div>
+
+            <hr class="footer-divider my-4" />
+
+            <p class="footer-copy text-center mb-0">
+                © 2025 Galería Prisma. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
 
     <button class="chat-btn" aria-label="Chat">
         <span>💬</span>
