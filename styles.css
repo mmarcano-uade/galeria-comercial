@@ -262,6 +262,9 @@ body {
   border: 1.5px solid var(--clr-terceary);
   padding: 1.4rem 1.4rem 2.8rem;
   background-color: var(--clr-white);
+  min-height: 430px;
+  max-height: 430px;
+
 }
 
 .store-card-inner {

@@ -1,0 +1,261 @@
+/* ========== SECCIÓN SERVICIO ESTACIONAMIENTO ========== */
+
+.parking-service-section {
+  background-color: var(--clr-white);
+}
+
+/* HERO */
+.parking-hero-wrapper {
+  border-top: 6px solid var(--clr-text-primary);
+  background-color: var(--clr-white);
+}
+
+.parking-hero {
+  padding: 3rem 0 2rem;
+}
+
+.parking-title-main {
+  font-size: 2.4rem;
+  letter-spacing: 0.14em;
+  color: var(--clr-text-primary);
+}
+
+.parking-title-secondary {
+  font-size: 2.4rem;
+  letter-spacing: 0.14em;
+  color: var(--clr-primary);
+}
+
+.parking-title-underline {
+  width: 210px;
+  height: 3px;
+  margin-top: 0.7rem;
+  background-color: var(--clr-primary);
+}
+
+/* patrón ajedrezado lado derecho */
+.parking-hero-pattern {
+  height: 180px;
+  background-image:
+    linear-gradient(45deg, #e2e2e2 25%, transparent 25%, transparent 75%, #e2e2e2 75%, #e2e2e2),
+    linear-gradient(45deg, #e2e2e2 25%, transparent 25%, transparent 75%, #e2e2e2 75%, #e2e2e2);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Barra negra "ver oferta" */
+.parking-offer-bar {
+  background-color: var(--clr-text-primary);
+  color: var(--clr-primary-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.7rem 0;
+}
+
+/* CARDS DE BENEFICIOS: contenedor */
+.parking-benefits {
+  background: linear-gradient(to bottom, #f5f5f5 0, #f5f5f5 60%, var(--clr-white) 100%);
+}
+
+/* CARD base con efectos */
+.parking-card {
+  background-color: var(--clr-white);
+  border-radius: 12px;
+  border: 1.5px solid var(--clr-secondary);
+  padding: 1rem 1.3rem 1.1rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  min-height: 150px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* card destacado */
+.parking-card-emphasis {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+}
+
+/* brillo diagonal sutil */
+.parking-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(251, 210, 63, 0.5),
+    transparent 40%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* HOVER */
+.parking-card:hover,
+.parking-card:focus-within {
+  transform: translateY(-6px);
+  border-color: var(--clr-primary);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.25);
+  background-color: #fffef8;
+}
+
+.parking-card:hover::before,
+.parking-card:focus-within::before {
+  opacity: 1;
+}
+
+/* header dentro del card */
+.parking-card-header {
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* icono circular */
+.parking-card-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #7a61d9; /* violeta base */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-white);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.parking-card:hover .parking-card-icon,
+.parking-card:focus-within .parking-card-icon {
+  transform: translateY(-2px) scale(1.07) rotate(-4deg);
+  background-color: #9b6cff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* texto */
+.parking-card-title {
+  font-size: 0.95rem;
+}
+
+.parking-card-text {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.parking-card-title,
+.parking-card-text {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.parking-card:hover .parking-card-title,
+.parking-card:focus-within .parking-card-title {
+  transform: translateY(-1px);
+  color: var(--clr-text-primary);
+}
+
+.parking-card:hover .parking-card-text,
+.parking-card:focus-within .parking-card-text {
+  transform: translateY(-1px);
+}
+
+/* RECOMENDACIONES */
+.parking-recommendations {
+  background-color: var(--clr-white);
+}
+
+.parking-reco-header {
+  background-color: var(--clr-text-primary);
+  color: var(--clr-primary-muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.5rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+/* caja grande con doble borde */
+.parking-reco-box {
+  border-radius: 22px;
+  border: 2px solid var(--clr-primary);
+  padding: 0.7rem;
+  max-width: 920px;
+}
+
+.parking-reco-inner {
+  border-radius: 18px;
+  border: 2px solid #9b6cff; /* violeta interno */
+  padding: 1.5rem 1.7rem;
+  background-color: var(--clr-white);
+}
+
+.parking-reco-title {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.parking-reco-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.parking-reco-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #7a61d9;
+  color: var(--clr-white);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.parking-reco-item h6 {
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.parking-reco-item p {
+  font-size: 0.78rem;
+  margin-bottom: 0;
+}
+
+.parking-reco-note {
+  font-size: 0.72rem;
+  color: #6a6a6a;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .parking-hero {
+    padding-top: 2.3rem;
+  }
+
+  .parking-title-main,
+  .parking-title-secondary {
+    font-size: 2rem;
+  }
+
+  .parking-reco-inner {
+    padding: 1.3rem 1.1rem;
+  }
+
+  .parking-reco-header {
+    width: 100%;
+    text-align: center;
+  }
+}
