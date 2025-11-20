@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let activeStoreId = stores[0]?.id || null;
 
     function getFilteredStores() {
-        if (activeCategory === "todos") return stores;
         return stores.filter((store) => {
             const name = store.name.toLowerCase();
             const cat = store.category.toLowerCase();
@@ -22,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const matchesCategory =
                 !activeCategory || store.categoryKey === activeCategory;
+            
+            if (activeCategory === "todos") {
+                return matchesTerm;
+            }
 
             return matchesTerm && matchesCategory;
         });
@@ -92,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchInput.addEventListener("input", (e) => {
         searchTerm = e.target.value.trim().toLowerCase();
+        console.log("Search term:", searchTerm);
         render();
     });
 
