@@ -684,25 +684,25 @@ body {
 }
 
 .media-estacionamiento {
-    background-image: url('/media/estacionamiento.jpg');
+    background-image: url('media/estacionamiento.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .media-asistente {
-    background-image: url('/media/asistentepersonal.jpg');
+    background-image: url('media/asistentepersonal.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .media-wifi {
-    background-image: url('/media/wifigratuito.jpg');
+    background-image: url('media/wifigratuito.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .media-descanso {
-    background-image: url('/media/areadedescanso.jpg');
+    background-image: url('media/areadedescanso.jpg');
     background-size: cover;
     background-position: center;
 }
