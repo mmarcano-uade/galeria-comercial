@@ -704,6 +704,18 @@ body {
     background-position: center;
 }
 
+.media-pet-friendly {
+    background-image: url('media/petfriendly.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.media-baby-care {
+    background-image: url('media/babycare.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 /* Parte inferior con texto */
 .benefit-card-body {
   padding: 1.1rem 1.4rem;
