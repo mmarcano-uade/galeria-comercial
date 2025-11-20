@@ -14,7 +14,7 @@
         name: "Soledad",
         category: "Moda",
         categoryKey: "moda",
-        link: "https://onettohector.github.io/TP-LOCAL-COMERCIAL-2/",
+        link: "https://micaela7.github.io/LOCAL-COMERCIAL-FINAL/",
         extra: "Local 215",
         position: { top: "43%", left: "78%" },
       },
