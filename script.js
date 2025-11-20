@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="store-extra">${store.extra}</div>
               </div>
             </div>
-            <a href="${store.link}" class="btn btn-store" target="_blank" rel="noopener noreferrer">Visitar</a>
+            ${ store.link ? `<a href="${store.link}" class="btn btn-store" target="_blank" rel="noopener noreferrer">Visitar</a>` : '' }
           </li>
         `
                 )
