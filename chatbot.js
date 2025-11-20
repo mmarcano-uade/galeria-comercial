@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function mockReply(text) {
     const msg = text.toLowerCase();
+      console.log(stores); //todo usar stores para preguntas
 
     if (msg.includes("horario") || msg.includes("abren") || msg.includes("abierto")) {
       return "Nuestro horario es de 10:00 a 22:00 todos los días 🕙.";
