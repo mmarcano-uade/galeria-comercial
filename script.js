@@ -46,14 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
           <li class="store-item ${store.id === activeStoreId ? "active" : ""
                         }" data-store="${store.id}">
             <div class="store-item-left">
-              <div class="store-avatar"></div>
+              <div class="store-avatar">${store.id}</div>
               <div class="store-text">
                 <div class="store-name">${store.name}</div>
                 <div class="store-category">${store.category}</div>
                 <div class="store-extra">${store.extra}</div>
               </div>
             </div>
-            <button class="btn btn-store">Visitar</button>
+            <a href="${store.link}" class="btn btn-store" target="_blank" rel="noopener noreferrer">Visitar</a>
           </li>
         `
                 )
