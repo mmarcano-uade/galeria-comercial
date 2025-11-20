@@ -257,6 +257,12 @@ body {
   border-color: var(--clr-primary);
 }
 
+.benefit-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .store-card {
   border-radius: 20px;
   border: 1.5px solid var(--clr-terceary);
