@@ -46,6 +46,8 @@ body {
 }
 
 .banner {
+  position: relative; 
+  overflow: hidden;
   min-height: 55vh;
   padding: 4rem 0;
   background-image:
@@ -53,6 +55,31 @@ body {
     linear-gradient(45deg, #eaeaea 25%, transparent 25%, transparent 75%, #eaeaea 75%, #eaeaea);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner .container {
+    position: relative;
+    z-index: 2;
 }
 
 .banner-title {
@@ -65,12 +92,12 @@ body {
   font-size: 0.9rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--clr-text-primary);
+  color: var(--clr-white);
 }
 
 .banner-body {
   font-size: 0.9rem;
-  color: var(--clr-text-secondary);
+  color: var(--clr-white);
 }
 
 .btn-gold {
@@ -158,6 +185,153 @@ body {
   font-size: 0.75rem;
   color: var(--clr-text-secondary);
 }
+
+.circle-nav-section {
+  background-color: #f3f3f3;
+}
+
+.circle-nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.circle-nav-viewport {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.circle-nav-grid {
+  --circle-visible: 4;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.4s ease;
+}
+
+.circle-item {
+  flex: 0 0 calc(100% / var(--circle-visible));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.circle-inner {
+  position: relative;
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 2px solid var(--clr-primary);
+  overflow: hidden;
+  background-color: var(--clr-white);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-item:hover .circle-inner {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--clr-secondary);
+}
+
+.circle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.circle-item:hover .circle-bg {
+  transform: scale(1.1);
+}
+
+.circle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.circle-item:hover .circle-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.circle-text {
+  position: relative;
+  z-index: 2;
+  color: var(--clr-text-secondary);
+  font-family: "Montaga", serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  padding: 0 0.5rem;
+}
+
+.circle-nav-btn {
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  color: var(--clr-primary);
+}
+
+.circle-nav-btn:focus {
+  outline: none;
+}
+
+.circle-nav-btn:hover {
+  color: var(--clr-secondary);
+}
+
+.circle-nav-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+@media (max-width: 992px) {
+  .circle-inner {
+    max-width: 160px;
+  }
+
+  .circle-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .circle-nav-wrapper {
+    gap: 0.5rem;
+  }
+
+  .circle-inner {
+    max-width: 130px;
+  }
+
+  .circle-text {
+    font-size: 0.9rem;
+  }
+}
+
 
 .chat-btn {
   position: fixed;
@@ -507,6 +681,30 @@ body {
     linear-gradient(45deg, #e0e0e0 25%, transparent 25%, transparent 75%, #e0e0e0 75%, #e0e0e0);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
+}
+
+.media-estacionamiento {
+    background-image: url('/media/estacionamiento.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.media-asistente {
+    background-image: url('/media/asistentepersonal.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.media-wifi {
+    background-image: url('/media/wifigratuito.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.media-descanso {
+    background-image: url('/media/areadedescanso.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Parte inferior con texto */

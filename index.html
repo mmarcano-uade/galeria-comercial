@@ -35,15 +35,19 @@
 
         <main>
             <section class="banner d-flex align-items-center text-center">
+                <video class="banner-video" autoplay muted loop playsinline>
+                    <source src="/media/Videoprincipal.mp4" type="video/mp4">
+                </video>
+                <div class="banner-overlay"></div>
                 <div class="container">
                     <h1 class="banner-title mb-3">PRISMA</h1>
                     <p class="banner-subtitle text-uppercase mb-1">Todo lo que necesitás, al nivel que merecés.</p>
-                    <p class="banner-body mb-4">Prisma está diseñado para quienes buscan
-                        una experiencia de compra superior. Nuestro espacio integra tiendas especializadas de
+                    <p class="banner-body mb-4">Prisma está diseñado para quienes buscan 
+                        una experiencia de compra superior. Nuestro espacio integra tiendas especializadas de 
                         decoración, joyería, fotografía y tecnología.
-                        Con un enfoque en servicios premium, ofrecemos comodidades pensadas
+                        Con un enfoque en servicios premium, ofrecemos comodidades pensadas 
                         para que cada visita sea memorable.
-                        En Prisma, cada detalle está creado para brindar confort,
+                        En Prisma, cada detalle está creado para brindar confort, 
                         elegancia y una experiencia inolvidable.</p>
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
                         <a href="#" class="btn btn-gold px-4">Nuestros locales</a>
@@ -51,6 +55,61 @@
                     </div>
                 </div>
             </section>
+
+            <section class="circle-nav-section py-5">
+  <div class="container">
+    <div class="circle-nav-wrapper">
+      <button class="circle-nav-btn circle-nav-btn-prev" type="button" aria-label="Anterior">‹</button>
+
+      <div class="circle-nav-viewport">
+        <div class="circle-nav-grid" data-visible="4">
+          <a href="servicios.html" class="circle-item">
+            <div class="circle-inner">
+              <div class="circle-bg" style="background-image: url('/media/seccionservicios.jpg');"></div>
+              <div class="circle-overlay"></div>
+              <span class="circle-text">VER<br>SERVICIOS</span>
+            </div>
+          </a>
+
+          <a href="actividades.html" class="circle-item">
+            <div class="circle-inner">
+              <div class="circle-bg" style="background-image: url('/media/seccionactividades.jpg');"></div>
+              <div class="circle-overlay"></div>
+              <span class="circle-text">VER<br>ACTIVIDADES</span>
+            </div>
+          </a>
+
+          <a href="locales.html" class="circle-item">
+            <div class="circle-inner">
+              <div class="circle-bg" style="background-image: url('/media/seccionlocales.jpg');"></div>
+              <div class="circle-overlay"></div>
+              <span class="circle-text">VER<br>LOCALES</span>
+            </div>
+          </a>
+
+          <a href="ofertas.html" class="circle-item">
+            <div class="circle-inner">
+              <div class="circle-bg" style="background-image: url('/media/seccionofertas.jpg');"></div>
+              <div class="circle-overlay"></div>
+              <span class="circle-text">VER<br>OFERTAS</span>
+            </div>
+          </a>
+
+          <a href="contacto.html" class="circle-item">
+            <div class="circle-inner">
+              <div class="circle-bg" style="background-color: var(--clr-primary-muted);"></div>
+              <div class="circle-overlay"></div>
+              <span class="circle-text">VER<br>CONTACTO</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <button class="circle-nav-btn circle-nav-btn-next" type="button" aria-label="Siguiente">›</button>
+    </div>
+  </div>
+</section>
+
 
             <section class="services text-center py-5">
                 <div class="container">
@@ -68,27 +127,24 @@
                 <div class="container">
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <a href="estacionamiento.html" class="benefit-card-link">
-
-                                <article class="benefit-card">
-                                    <div class="benefit-card-media"></div>
-                                    <div class="benefit-card-body d-flex justify-content-between">
-                                        <div>
-                                            <h3 class="benefit-title">Estacionamiento</h3>
-                                            <p class="benefit-text">
-                                                Servicio de estacionamiento con reserva y asistencia profesional.
-                                                Tu vehículo en manos expertas.
-                                            </p>
-                                        </div>
-                                        <span class="benefit-arrow">&rsaquo;</span>
+                            <article class="benefit-card">
+                                <div class="benefit-card-media media-estacionamiento"></div>
+                                <div class="benefit-card-body d-flex justify-content-between">
+                                    <div>
+                                        <h3 class="benefit-title">Estacionamiento</h3>
+                                        <p class="benefit-text">
+                                            Servicio de estacionamiento con reserva y asistencia profesional.
+                                            Tu vehículo en manos expertas.
+                                        </p>
                                     </div>
-                                </article>
-                            </a>
+                                    <span class="benefit-arrow">&rsaquo;</span>
+                                </div>
+                            </article>
                         </div>
 
                         <div class="col-md-6">
                             <article class="benefit-card">
-                                <div class="benefit-card-media"></div>
+                                <div class="benefit-card-media media-asistente"></div>
                                 <div class="benefit-card-body d-flex justify-content-between">
                                     <div>
                                         <h3 class="benefit-title">Asistente Personal</h3>
@@ -104,7 +160,7 @@
 
                         <div class="col-md-6">
                             <article class="benefit-card">
-                                <div class="benefit-card-media"></div>
+                                <div class="benefit-card-media media-wifi"></div>
                                 <div class="benefit-card-body d-flex justify-content-between">
                                     <div>
                                         <h3 class="benefit-title">WIFI Gratuito</h3>
@@ -119,7 +175,7 @@
 
                         <div class="col-md-6">
                             <article class="benefit-card">
-                                <div class="benefit-card-media"></div>
+                                <div class="benefit-card-media media-descanso"></div>
                                 <div class="benefit-card-body d-flex justify-content-between">
                                     <div>
                                         <h3 class="benefit-title">Área de Descanso</h3>
@@ -131,6 +187,36 @@
                                 </div>
                             </article>
                         </div>
+                        <div class="col-md-6">
+                            <article class="benefit-card">
+                                <div class="benefit-card-media media-pet-friendly"></div>
+                                <div class="benefit-card-body d-flex justify-content-between">
+                                    <div>
+                                        <h3 class="benefit-title">Pet  Friendly</h3>
+                                        <p class="benefit-text">
+                                            Tus compañeros son bienvenidos. Disfruta del recorrido junto a tu mascota,
+                                            con puntos de hidratación y más.
+                                        </p>
+                                    </div>
+                                    <span class="benefit-arrow">&rsaquo;</span>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="benefit-card">
+                                <div class="benefit-card-media media-baby-care"></div>
+                                <div class="benefit-card-body d-flex justify-content-between">
+                                    <div>
+                                        <h3 class="benefit-title">Baby Care</h3>
+                                        <p class="benefit-text">
+                                            Disfruta del cuidado recreativo supervisado para bebés y niños,
+                                            accede a cabinas privadas de lactancia e higiene.
+                                        </p>
+                                    </div>
+                                    <span class="benefit-arrow">&rsaquo;</span>
+                                </div>
+                            </article>
+                        </div>                                                
                     </div>
                 </div>
             </section>
@@ -290,6 +376,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script-store.js"></script>
     <script src="script.js"></script>
+    <script src="carrusel.js"></script>
 </body>
 
 </html>
