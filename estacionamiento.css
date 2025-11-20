@@ -122,7 +122,7 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background-color: #7a61d9; /* violeta base */
+  background-color: var(--clr-primary-muted);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +139,7 @@
 .parking-card:hover .parking-card-icon,
 .parking-card:focus-within .parking-card-icon {
   transform: translateY(-2px) scale(1.07) rotate(-4deg);
-  background-color: #9b6cff;
+  background-color:  var(--clr-primary-muted);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 

@@ -20,12 +20,13 @@
 
                 <nav class="d-none d-md-block">
                     <ul class="nav small">
-                        <li class="nav-item"><a href="index.html" class="nav-link px-2">Inicio</a></li>
-                        <li class="nav-item"><a href="servicios.html" class="nav-link px-2">Servicios</a></li>
-                        <li class="nav-item"><a href="entretenimiento.html" class="nav-link px-2">Entretenimiento</a></li>
-                        <li class="nav-item"><a href="locales.html" class="nav-link px-2">Locales</a></li>
-                        <li class="nav-item"><a href="ofertas.html" class="nav-link px-2">Ofertas</a></li>
-                        <li class="nav-item"><a href="gastronomia.html" class="nav-link px-2">Gastronomía</a></li>
+    <li class="nav-item"><a href="index.html" class="nav-link px-2">Inicio</a></li>
+                        <li class="nav-item"><a href="index.html#services" class="nav-link px-2">Servicios</a></li>
+                        <li class="nav-item"><a href="index.html#entertainment"
+                                class="nav-link px-2">Entretenimiento</a>
+                        </li>
+                        <li class="nav-item"><a href="index.html#store-finder" class="nav-link px-2">Locales</a></li>
+                        <li class="nav-item"><a href="index.html#offers" class="nav-link px-2">Ofertas</a></li>
                         <li class="nav-item"><a href="contacto.html" class="nav-link px-2">Contacto</a></li>
                     </ul>
                 </nav>
@@ -44,33 +45,52 @@
             </div>
 
             <div class="contact-card position-relative mx-auto">
-                <form class="contact-form">
+                <form id="contactForm" novalidate>
                     <div class="mb-3">
                         <label class="contact-label" for="contactName">NOMBRE:</label>
-                        <input type="text" id="contactName" class="form-control contact-input" placeholder="Tu nombre" />
+                        <input type="text" id="contactName" name="name" class="form-control contact-input"
+                            placeholder="Tu nombre" required />
+                        <div class="invalid-feedback small">
+                            Por favor ingresá tu nombre.
+                        </div>
                     </div>
 
                     <div class="mb-3">
                         <label class="contact-label" for="contactEmail">EMAIL:</label>
-                        <input type="email" id="contactEmail" class="form-control contact-input" placeholder="tunombre@correo.com" />
+                        <input type="email" id="contactEmail" name="email" class="form-control contact-input"
+                            placeholder="tunombre@correo.com" required />
+                        <div class="invalid-feedback small">
+                            Ingresá un correo electrónico válido.
+                        </div>
                     </div>
 
                     <div class="mb-3">
                         <label class="contact-label" for="helpTopic">¿EN QUÉ PODEMOS AYUDARTE?</label>
-                        <select id="helpTopic" class="form-select contact-input contact-select">
+                        <select id="helpTopic" name="topic" class="form-select contact-input contact-select" required>
                             <option value="general" selected>Consultas generales</option>
                             <option value="sugerencias">Sugerencias y experiencia</option>
                             <option value="objetos">Objetos perdidos</option>
                         </select>
+                        <div class="invalid-feedback small">
+                            Seleccioná un tipo de consulta.
+                        </div>
                     </div>
 
                     <div class="mb-4">
                         <label class="contact-label" for="contactMessage">MENSAJE:</label>
-                        <textarea id="contactMessage" rows="4" class="form-control contact-textarea" placeholder="Escribí tu mensaje aquí..."></textarea>
+                        <textarea id="contactMessage" name="message" rows="4" class="form-control contact-textarea"
+                            placeholder="Escribí tu mensaje aquí..." required></textarea>
+                        <div class="invalid-feedback small">
+                            Contanos brevemente en qué podemos ayudarte (mínimo 10 caracteres).
+                        </div>
                     </div>
 
                     <div class="text-end">
                         <button type="submit" class="btn contact-submit">ENVIAR</button>
+                    </div>
+
+                    <div id="contactSuccess" class="mt-3 small text-success d-none">
+                        ¡Gracias! Recibimos tu mensaje y te contactaremos a la brevedad.
                     </div>
                 </form>
             </div>
@@ -83,7 +103,7 @@
                 <div class="col-md-4">
                     <h4 class="footer-title">PRISMA</h4>
                     <p class="footer-text">
-                        Somos un centro comercial pensado para quienes buscan estilo, 
+                        Somos un centro comercial pensado para quienes buscan estilo,
                         calidad y comodidad en un solo lugar. Viví una experiencia única, diseñada para sorprenderte.
                     </p>
 
@@ -123,6 +143,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script-store.js"></script>
     <script src="script.js"></script>
+    <script src="form.js"></script>
     <script src="chatbot.js"></script>
 </body>
+
 </html>

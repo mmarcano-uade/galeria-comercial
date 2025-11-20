@@ -56,6 +56,9 @@ body {
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
 }
+.bg-limits{
+  background-color: #f3f3f3;
+}
 
 .banner-video {
     position: absolute;
@@ -354,7 +357,7 @@ body {
   color: var(--clr-primary);
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 760px) {
   .top-bar .container {
     justify-content: center;
   }
@@ -367,11 +370,7 @@ body {
 
 /* =========================================== Maaaaaaaaaaaaaapaaaaaaaaaaaaaaaaaaaaaaaaaa ==================================== */
 
-.store-finder {
-  background-color: var(--clr-white);
-}
 
-/* Cinta superior */
 .offers-marquee {
   background-color: var(--clr-text-primary);
   color: var(--clr-yellow-v2);
@@ -634,8 +633,7 @@ body {
   font-size: 1.1rem;
 }
 
-/* Responsive */
-@media (max-width: 767.98px) {
+@media (max-width: 760px) {
   .store-card {
     padding: 1.2rem 1rem 2.8rem;
   }
@@ -758,8 +756,7 @@ body {
   transform: translateX(3px);
 }
 
-/* Responsive */
-@media (max-width: 767.98px) {
+@media (max-width: 760px) {
   .benefit-card-body {
     padding: 1rem 1.1rem;
   }
@@ -890,8 +887,7 @@ body {
   bottom: -26px;
 }
 
-/* Responsive */
-@media (max-width: 991.98px) {
+@media (max-width: 990px) {
   .contact-card {
     padding: 1.8rem 1.4rem 3.4rem;
   }
@@ -1064,4 +1060,152 @@ body {
 
 .footer-copy {
   font-size: 0.78rem;
+}
+
+
+/* ========== SECCIÓN NOVEDADES Y BENEFICIOS ========== */
+
+.news-benefits-section {
+  background-color: #f5f5f5;
+}
+
+/* Título */
+.news-title {
+  font-size: 2.6rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-text-primary);
+}
+
+.news-title-underline {
+  margin-top: 0.8rem;
+  width: 230px;
+  height: 4px;
+  background-color: var(--clr-primary);
+}
+
+/* Wrapper de cards */
+.news-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Card exterior (marco gris) */
+.promo-card {
+  flex: 1 1 0;
+  min-width: 200px;
+  background-color: #d3d3d3;
+  border-radius: 18px;
+  padding: 0.4rem;
+  /* SIN sombra */
+  box-shadow: none;
+}
+
+/* Interior del card */
+.promo-card-inner {
+  border-radius: 14px;
+  padding: 1.3rem 1.5rem;
+}
+
+/* Variantes de color */
+.promo-card-yellow {
+  background-color: var(--clr-yellow-v2);
+}
+
+.promo-card-white {
+  background-color: var(--clr-white);
+}
+
+.promo-card-gold {
+  background-color: var(--clr-primary);
+}
+
+/* Texto del card 1 */
+.promo-card-text {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.promo-card-line {
+  display: block;
+}
+
+.promo-card-big {
+  margin-top: 0.7rem;
+  font-size: 1.6rem;
+}
+
+/* Texto centrado cards 2 y 3 */
+.promo-card-center {
+  margin: 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Bloque negro de registro */
+.news-register-block {
+  background-color: var(--clr-text-primary);
+  color: var(--clr-yellow-v2);
+  padding: 1.6rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 1rem;
+}
+
+/* Tarjeta de registro */
+.news-register-card {
+  background-color: var(--clr-white);
+  border-radius: 18px;
+  border: 2px solid var(--clr-primary);
+  padding: 1.4rem 1.8rem;
+}
+
+.news-register-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.news-register-input {
+  border: none;
+  border-bottom: 1px solid var(--clr-text-secondary);
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 0.9rem;
+  box-shadow: none;
+}
+
+.news-register-input:focus {
+  box-shadow: none;
+  border-bottom-color: var(--clr-primary);
+}
+
+.news-register-button {
+  background-color: var(--clr-yellow-v2);
+  color: var(--clr-text-secondary);
+  border-radius: 999px;
+  border: none;
+  padding: 0.45rem 1.6rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 760px) {
+  .news-title {
+    font-size: 2.1rem;
+  }
+
+  .news-register-block {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .news-register-card {
+    margin-top: 0.5rem;
+  }
 }
