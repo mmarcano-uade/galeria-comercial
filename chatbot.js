@@ -59,25 +59,41 @@ document.addEventListener("DOMContentLoaded", () => {
     function mockReply(text) {
         const msg = cleanText(text);
 
+        if (msg.includes("hola") || msg.includes("buenas") || msg.includes("holis")) {
+            return "¡Hola! 👋 Soy el asistente virtual del shopping. ¿En qué te puedo ayudar hoy? Busco locales, horarios o servicios.";
+        }
+
         if (msg.includes("horario") || msg.includes("abren") || msg.includes("abierto")) {
             return "Nuestro horario es de 10:00 a 22:00 todos los días 🕙.";
+        }
+
+        if (msg.includes("hora") && !msg.includes("horario")) {
+            const fecha = new Date();
+            // Formato simple HH:MM
+            const horaActual = fecha.getHours() + ":" + fecha.getMinutes().toString().padStart(2, '0');
+            return `En este momento son las ${horaActual} ⌚.`;
         }
 
         if (msg.includes("estacionamiento") || msg.includes("parking")) {
             return "Contamos con estacionamiento cubierto en el subsuelo. La primera hora es sin cargo 🚗.";
         }
 
+        if (msg.includes("baño") || msg.includes("tualet") || msg.includes("aseos")) {
+            return "Los baños están en el **Local 5**, justo al frente del local 3 'Fullgarden' 🚻.";
+        }
+
+        if (msg.includes("patio de comida")) {
+            return "El Patio de Comidas se encuentra ubicado centralmente en el **Local 10**.";
+        }
+
         if (msg.includes("cine") || msg.includes("pelicula")) {
-            return "El cine está en el 3er piso, sector entretenimiento 🎬.";
+            return "El cine está en el 1er piso, sector entretenimiento 🎬.";
         }
 
         const localMatch = msg.match(/local\s+(\d+)/);
-
         if (localMatch) {
             const numeroLocal = localMatch[1];
-
             const store = stores.find(s => s.extra.includes(numeroLocal));
-
             if (store) {
                 return `En el ${store.extra} se encuentra **"${store.name}"** que pertenece a la categoría de *${store.category}*.`;
             } else {
@@ -86,17 +102,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const storesByCategory = stores.filter(s => msg.includes(cleanText(s.category)) || msg.includes(cleanText(s.categoryKey)));
-
         if (storesByCategory.length > 0) {
             const lista = storesByCategory
                 .map(s => `• ${s.name} (${s.extra})`)
                 .join("\n");
-
             return `Encontré estos locales de esa categoría:\n${lista}`;
         }
 
         const storeByName = stores.find(s => msg.includes(cleanText(s.name)));
-
         if (storeByName) {
             return `**${storeByName.name}** está ubicada en el ${storeByName.extra} (${storeByName.category}).`;
         }
@@ -111,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return "Podés ver el listado completo de locales en la sección \"Locales\" del menú superior.";
         }
 
-        return "Por ahora soy un chat noob, no te puedo ayudar con eso. 🤖. Preguntame por un número de local (ej: Local 215), por categorías (ej: Tecnología) o servicios.";
+        return "Mmm, no encontré nada sobre eso 🤔. Probá buscando por: Horarios, Baños, Cine o el nombre de un local.";
     }
 
     chatBtn.addEventListener("click", toggleChat);
