@@ -1,0 +1,71 @@
+# -----------------------
+# Sistema operativo
+# -----------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# -----------------------
+# IDE / editores
+# -----------------------
+# WebStorm / JetBrains
+.idea/
+*.iml
+# (si querés mantener ciertos archivos de .idea, ajusta en vez de ignorar toda la carpeta)
+
+# VS Code (por si aparece)
+.vscode/
+
+# -----------------------
+# Archivos generados / build
+# -----------------------
+/dist/
+/build/
+/out/
+/public/build/
+/tmp/
+/temp/
+/cache/
+/.venv/
+/__pycache__/
+
+# -----------------------
+# Archivos de entorno / secretos
+# -----------------------
+.env
+.env.local
+.env.*.local
+
+# -----------------------
+# Archivos de log, swap, backup
+# -----------------------
+*.log
+*.log.*
+*.cache
+*.bak
+*.tmp
+*~
+*.swp
+*.swo
+*.orig
+
+# -----------------------
+# Cachés / herramientas comunes
+# -----------------------
+.sass-cache/
+*.css.map
+*.map
+
+# -----------------------
+# Otros (opcionales / útiles)
+# -----------------------
+.history/
+.idea_modules/   # por si algún plugin crea uno
+.vagrant/
