@@ -15,7 +15,7 @@
 body {
   margin: 0;
   background-color: #f3f3f3;
-  font-family: "Montaga", serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--clr-text-secondary);
 }
 
@@ -86,6 +86,7 @@ body {
 }
 
 .banner-title {
+  font-family: Georgia, 'Times New Roman', Times, serif 
   font-size: clamp(2.7rem, 5vw, 3.2rem);
   letter-spacing: 0.12em;
   color: var(--clr-primary);
