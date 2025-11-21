@@ -1,0 +1,221 @@
+.gastro-service-section {
+    background-color: #f7f6f2;
+    font-family: "Montaga", serif;
+}
+
+.gastro-hero-wrapper {
+    padding: 3rem 0 2rem;
+    background-image: radial-gradient(circle at 0 0, #e5e5e5 0, #e5e5e5 2px, transparent 2px),
+                      radial-gradient(circle at 10px 10px, #e5e5e5 0, #e5e5e5 2px, transparent 2px);
+    background-size: 20px 20px;
+    background-color: #ffffff;
+}
+
+.gastro-title-main {
+    font-size: 3rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.gastro-title-underline {
+    width: 220px;
+    height: 3px;
+    background-color: #f4c32b;
+}
+
+.gastro-price-bar {
+    background-color: #000000;
+    color: #f4c32b;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.9rem 1rem;
+    font-size: 0.9rem;
+}
+
+.gastro-intro-btn {
+    display: inline-block;
+    border: 2px solid #f4c32b;
+    border-radius: 8px;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    color: #f4c32b;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background-color: #ffffff;
+}
+
+.gastro-intro-btn:hover {
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.gastro-experience {
+    background-color: #fdfbf7;
+}
+
+.gastro-circles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    gap: 2.5rem 2.5rem;
+    justify-items: center;
+}
+
+.gastro-circle {
+    position:relative;
+    overflow: hidden;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 2px solid #f4c32b;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    background-color: #f9f9f9;
+}
+
+.gastro-circle[data-gastro="cafeteria"] {
+    background-image: url("media/cafeteria.jpg");
+}
+
+.gastro-circle[data-gastro="restaurante"] {
+    background-image: url("media/restaurante.jpg");
+}
+
+.gastro-circle[data-gastro="bar"] {
+    background-image: url("media/bar.jpg");
+}
+
+.gastro-circle[data-gastro="pasteleria"] {
+    background-image: url("media/pasteleria.jpg");
+}
+
+.gastro-circle-bottom {
+    grid-column: 2 / 3;
+}
+
+.gastro-circle-label {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.gastro-circle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    transition: background 0.2s ease;
+}
+
+.gastro-circle:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+}
+
+.gastro-menu-list {
+    position: relative;
+    min-height: 220px;
+}
+
+.gastro-menu-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e2e2e2;
+    border-left: 4px solid #f4c32b;
+    padding: 1.2rem 1.3rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.gastro-menu-card.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.gastro-menu-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    margin-bottom: 0.5rem;
+}
+
+.gastro-menu-text {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.gastro-map-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 2.8rem;
+    border-radius: 999px;
+    background: #ffc524;
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.12em;
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
+    border: none;
+}
+
+.gastro-map-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 991.98px) {
+    .gastro-hero-wrapper {
+        text-align: center;
+    }
+
+    .gastro-title-main {
+        font-size: 2.3rem;
+    }
+
+    .gastro-circles {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+
+    .gastro-circle-bottom {
+        grid-column: 1 / -1;
+    }
+
+    .gastro-menu-list {
+        margin-top: 2rem;
+        min-height: 180px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .gastro-circles {
+        grid-template-columns: 1fr;
+    }
+
+    .gastro-circle-bottom {
+        grid-column: auto;
+    }
+}

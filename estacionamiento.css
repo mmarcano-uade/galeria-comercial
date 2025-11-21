@@ -4,7 +4,6 @@
   background-color: var(--clr-white);
 }
 
-/* HERO */
 .parking-hero-wrapper {
   border-top: 6px solid var(--clr-text-primary);
   background-color: var(--clr-white);
@@ -33,7 +32,6 @@
   background-color: var(--clr-primary);
 }
 
-/* patrón ajedrezado lado derecho */
 .parking-hero-pattern {
   height: 180px;
   background-image:
@@ -43,7 +41,6 @@
   background-position: 0 0, 20px 20px;
 }
 
-/* Barra negra "ver oferta" */
 .parking-offer-bar {
   background-color: var(--clr-text-primary);
   color: var(--clr-primary-muted);
@@ -54,12 +51,10 @@
   padding: 0.7rem 0;
 }
 
-/* CARDS DE BENEFICIOS: contenedor */
 .parking-benefits {
   background: linear-gradient(to bottom, #f5f5f5 0, #f5f5f5 60%, var(--clr-white) 100%);
 }
 
-/* CARD base con efectos */
 .parking-card {
   background-color: var(--clr-white);
   border-radius: 12px;
@@ -76,12 +71,10 @@
     background-color 0.25s ease;
 }
 
-/* card destacado */
 .parking-card-emphasis {
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
 }
 
-/* brillo diagonal sutil */
 .parking-card::before {
   content: "";
   position: absolute;
@@ -97,7 +90,6 @@
   transition: opacity 0.25s ease;
 }
 
-/* HOVER */
 .parking-card:hover,
 .parking-card:focus-within {
   transform: translateY(-6px);
@@ -111,13 +103,35 @@
   opacity: 1;
 }
 
-/* header dentro del card */
+.parking-card-btn {
+    position: absolute;
+    right: .2rem;
+    bottom: .2rem;               
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 2.8rem;
+    border-radius: 999px;
+    background: #ffc524;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.parking-card-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+}
+
 .parking-card-header {
   gap: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
-/* icono circular */
 .parking-card-icon {
   width: 34px;
   height: 34px;
@@ -143,7 +157,6 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
-/* texto */
 .parking-card-title {
   font-size: 0.95rem;
 }
@@ -169,7 +182,6 @@
   transform: translateY(-1px);
 }
 
-/* RECOMENDACIONES */
 .parking-recommendations {
   background-color: var(--clr-white);
 }
@@ -185,7 +197,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* caja grande con doble borde */
 .parking-reco-box {
   border-radius: 22px;
   border: 2px solid var(--clr-primary);
@@ -195,7 +206,7 @@
 
 .parking-reco-inner {
   border-radius: 18px;
-  border: 2px solid #9b6cff; /* violeta interno */
+  border: 2px solid #9b6cff;
   padding: 1.5rem 1.7rem;
   background-color: var(--clr-white);
 }
@@ -239,7 +250,6 @@
   color: #6a6a6a;
 }
 
-/* Responsive */
 @media (max-width: 767.98px) {
   .parking-hero {
     padding-top: 2.3rem;
