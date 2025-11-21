@@ -32,7 +32,7 @@
         name: "Aruma home",
         category: "Hogar",
         categoryKey: "hogar",
-        link: "https://denisemazur16.github.io/Aruma-Home-2.0/",
+        link: "https://denisemazur16.github.io/Mi-Local-Aruma-Home-2.0/",
         extra: "Local 08",
         position: { top: "43%", left: "55%" },
       },
