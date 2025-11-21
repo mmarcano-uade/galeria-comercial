@@ -12,22 +12,40 @@
 
 <body>
     <div class="page-wrapper mx-auto">
-        <header class="top-bar py-2">
+        <header class="top-bar py-2 fixed-top">
             <div class="container d-flex justify-content-between align-items-center">
                 <div class="brand small fw-semibold">
-                    XXX <span class="text-gold">PRISMA</span>
+                    <span class="text-white">GALERIA</span>
+                    <span class="text-gold">PRISMA</span>
                 </div>
 
-                <nav class="d-none d-md-block">
-                    <ul class="nav small">
-    <li class="nav-item"><a href="index.html" class="nav-link px-2">Inicio</a></li>
-                        <li class="nav-item"><a href="index.html#services" class="nav-link px-2">Servicios</a></li>
-                        <li class="nav-item"><a href="index.html#entertainment"
-                                class="nav-link px-2">Entretenimiento</a>
+                <button class="burger-btn d-md-none" type="button" aria-label="Abrir menú" aria-expanded="false"
+                    aria-controls="mainNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav id="mainNav" class="main-nav">
+                    <ul class="nav small flex-column flex-md-row">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link px-2">Inicio</a>
                         </li>
-                        <li class="nav-item"><a href="index.html#store-finder" class="nav-link px-2">Locales</a></li>
-                        <li class="nav-item"><a href="index.html#offers" class="nav-link px-2">Ofertas</a></li>
-                        <li class="nav-item"><a href="contacto.html" class="nav-link px-2">Contacto</a></li>
+                        <li class="nav-item">
+                            <a href="index.html#services" class="nav-link px-2">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#entertainment" class="nav-link px-2">Entretenimiento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#store-finder" class="nav-link px-2">Locales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#offers" class="nav-link px-2">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacto.html" class="nav-link px-2">Contacto</a>
+                        </li>
                     </ul>
                 </nav>
             </div>

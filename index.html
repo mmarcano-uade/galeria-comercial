@@ -17,29 +17,48 @@
         <header class="top-bar py-2 fixed-top">
             <div class="container d-flex justify-content-between align-items-center">
                 <div class="brand small fw-semibold">
-                    <span class="text-white">GALERIA</span> 
+                    <span class="text-white">GALERIA</span>
                     <span class="text-gold">PRISMA</span>
                 </div>
 
-                <nav class="d-none d-md-block">
-                    <ul class="nav small">
-                        <li class="nav-item"><a href="index.html" class="nav-link px-2">Inicio</a></li>
-                        <li class="nav-item"><a href="index.html#services" class="nav-link px-2">Servicios</a></li>
-                        <li class="nav-item"><a href="index.html#entertainment"
-                                class="nav-link px-2">Entretenimiento</a>
+                <button class="burger-btn d-md-none" type="button" aria-label="Abrir menú" aria-expanded="false"
+                    aria-controls="mainNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav id="mainNav" class="main-nav">
+                    <ul class="nav small flex-column flex-md-row">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link px-2">Inicio</a>
                         </li>
-                        <li class="nav-item"><a href="index.html#store-finder" class="nav-link px-2">Locales</a></li>
-                        <li class="nav-item"><a href="index.html#offers" class="nav-link px-2">Ofertas</a></li>
-                        <li class="nav-item"><a href="contacto.html" class="nav-link px-2">Contacto</a></li>
+                        <li class="nav-item">
+                            <a href="index.html#services" class="nav-link px-2">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#entertainment" class="nav-link px-2">Entretenimiento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#store-finder" class="nav-link px-2">Locales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#offers" class="nav-link px-2">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacto.html" class="nav-link px-2">Contacto</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </header>
 
+
         <main>
             <section class="banner d-flex align-items-center text-center">
                 <video class="banner-video" autoplay muted loop playsinline>
-                    <source src="media/Videoprincipal.mp4" type="video/mp4" alt="video con una buena vista del interior de la galería">
+                    <source src="media/Videoprincipal.mp4" type="video/mp4"
+                        alt="video con una buena vista del interior de la galería">
                 </video>
                 <div class="banner-overlay"></div>
                 <div class="container">
@@ -105,7 +124,8 @@
 
                                 <a href="contacto.html" class="circle-item">
                                     <div class="circle-inner">
-                                        <div class="circle-bg" style="background-image: url('media/seccioncontactos.png');">
+                                        <div class="circle-bg"
+                                            style="background-image: url('media/seccioncontactos.png');">
                                         </div>
                                         <div class="circle-overlay"></div>
                                         <span class="circle-text">VER<br>CONTACTO</span>
@@ -327,7 +347,8 @@
                         <div class="col-12 col-lg-6">
                             <div class="store-card position-relative">
                                 <div class="store-card-inner">
-                                    <div id="mapa-interactivo" class="d-flex justify-content-between align-items-center mb-3">
+                                    <div id="mapa-interactivo"
+                                        class="d-flex justify-content-between align-items-center mb-3">
                                         <h3 class="directory-title mb-0">MAPA INTERACTIVO</h3>
                                     </div>
 
@@ -451,10 +472,11 @@
                                     </h4>
                                 </div>
                                 <p class="parking-card-text">
-                                Una propuesta gastronómica que combina platos cuidadosamente elaborados, coctelería de autor y pastelería fina, 
-                                creando una experiencia elegante para disfrutar en cualquier momento del día.
-                                </p>                                    
-                                <a href="gastronomia.html" class="parking-card-btn">VISITAR</a>                                    
+                                    Una propuesta gastronómica que combina platos cuidadosamente elaborados, coctelería
+                                    de autor y pastelería fina,
+                                    creando una experiencia elegante para disfrutar en cualquier momento del día.
+                                </p>
+                                <a href="gastronomia.html" class="parking-card-btn">VISITAR</a>
                             </article>
                         </div>
 
@@ -481,29 +503,26 @@
                     <div class="news-cards-wrapper mb-4">
                         <div class="promo-card">
                             <div class="promo-card-inner">
-                                <img src="media/promo3.png"
-                                    class="promo-card-img"
+                                <img src="media/promo3.png" class="promo-card-img"
                                     alt="2 horas de estacionamiento gratis en tu primera visita.">
                             </div>
                         </div>
 
                         <div class="promo-card">
                             <div class="promo-card-inner">
-                                <img src="media/promo1.png"
-                                    class="promo-card-img"
+                                <img src="media/promo1.png" class="promo-card-img"
                                     alt="Cumpleaños diciembre, 30% de descuento en 2 de nuestros locales presentando tu DNI.">
                             </div>
                         </div>
 
                         <div class="promo-card">
                             <div class="promo-card-inner">
-                                <img src="media/promo2.jpg"
-                                    class="promo-card-img"
+                                <img src="media/promo2.jpg" class="promo-card-img"
                                     alt="Compartí tu visita, subí una historia y etiquetanos para retirar un obsequio exclusivo en atención al cliente.">
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row g-4 align-items-stretch">
                         <div class="col-md-5">
                             <div class="news-register-block h-100 d-flex align-items-center">
@@ -536,13 +555,13 @@
                             </div>
                         </div>
                     </div>
-                                        </div>
-
                 </div>
-            </section>
+
+    </div>
+    </section>
 
 
-        </main>
+    </main>
     </div>
 
     <footer class="main-footer py-5">
